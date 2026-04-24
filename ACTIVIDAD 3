@@ -17,6 +17,8 @@ Respondan:
 La memoria ya no es un bloque único sino nodos dispersos conectados por punteros.
 
 2. Expliquen la diferencia entre acceso por rango y acceso por posición o enlace.
+
+
 3. Expliquen por qué una lista enlazada mejora inserciones y eliminaciones locales, pero empeora el acceso por índice.
 4. Expliquen por qué `SLList` implementa bien operaciones de `Stack` y `Queue`.
 5. Expliquen por qué `SLList` no implementa naturalmente todas las operaciones de un `Deque` con el mismo costo.
@@ -51,7 +53,15 @@ Construyan una tabla con cuatro columnas:
 Luego respondan:
 
 1. En `demo_sllist.cpp`, ¿qué secuencia deja más clara la coexistencia de comportamiento tipo pila y tipo cola dentro de `SLList`?
+Pila: push(5) inserta al inicio, pop() remueve del inicio. La lista actúa como LIFO (Last In, First Out).
+Cola: add(10) y add(20) insertan al final, remove() remueve del inicio. La lista actúa como FIFO (First In, First Out).
+Coexistencia: Ambas operaciones comparten el mismo extremo (el frente) para acceso/remoción, pero usan extremos opuestos para inserción.
+Esto demuestra cómo SLList puede simular ambas estructuras.
+
 2. En `demo_dllist.cpp`, ¿qué operación muestra mejor la inserción en una posición intermedia?
+add(1, 20) inserta el valor 20 en la posición índice 1, desplazando el elemento existente (30) hacia la derecha.
+La lista queda como [10, 20, 30], demostrando cómo DLList permite inserciones eficientes en posiciones arbitrarias sin necesidad de desplazar todos los elementos
+
 3. En `demo_selist.cpp`, ¿qué observable permite defender que la lista mantiene orden lógico aunque internamente trabaje por bloques?
 4. En `demo_deng_list.cpp`, ¿qué evidencia muestra que la lista reforzada por Deng ofrece operaciones más cercanas a un ADT de lista completo?
 5. En `demo_morin_deng_bridge.cpp`, ¿qué parte de la salida permite justificar que se reutilizan algoritmos sin reescribir la estructura base?
