@@ -87,6 +87,11 @@ Revisen:
 Respondan:
 
 1. ¿Qué operaciones mínimas valida la prueba pública para `SLList`?
+- add(int i, const T& x): Inserción en posiciones específicas (índices 0, 1, 1).
+- get(int i): Acceso por índice para verificar elementos.
+- remove(int i): Eliminación por índice.
+- size(): Consulta del tamaño de la lista.
+
 2. ¿Qué operaciones mínimas valida la prueba pública para `DLList`?
 3. ¿Qué operaciones mínimas valida la prueba pública para `SEList`?
 4. ¿Qué operaciones nuevas quedan cubiertas por `test_public_extras.cpp`?
