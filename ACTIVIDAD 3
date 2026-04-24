@@ -14,6 +14,8 @@ Revisen:
 Respondan:
 
 1. Expliquen con sus palabras qué cambia cuando una estructura pasa de almacenamiento contiguo a almacenamiento dinámico.
+La memoria ya no es un bloque único sino nodos dispersos conectados por punteros.
+
 2. Expliquen la diferencia entre acceso por rango y acceso por posición o enlace.
 3. Expliquen por qué una lista enlazada mejora inserciones y eliminaciones locales, pero empeora el acceso por índice.
 4. Expliquen por qué `SLList` implementa bien operaciones de `Stack` y `Queue`.
